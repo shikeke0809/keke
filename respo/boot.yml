@@ -1,0 +1,25 @@
+server:
+  port: 8080
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:8761/eureka/
+      #defaultZone: http://peer1:8701/eureka/
+spring:
+  application:
+    name: boot-web
+  datasource:
+    username: simt
+    password: simt
+    url: jdbc:oracle:thin:@127.0.0.1:1521:orcl
+    driver-class-name: oracle.jdbc.driver.OracleDriver
+#  thymeleaf:
+#    prefix: classpath:/templates/
+  mvc:
+    view:
+      prefix: classpath:/templates/
+      suffix: .html
+mybatis:
+  mapper-locations: classpath:mapper/*.xml #指定mapperxml所在的位置，要用/分割
+logging:
+  file: E:/logs/springboot.log #指定日志路径

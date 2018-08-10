@@ -7,7 +7,7 @@ eureka:
       #defaultZone: http://peer1:8701/eureka/
 spring:
   application:
-    name: boot-web
+    name: boot
   datasource:
     username: simt
     password: simt

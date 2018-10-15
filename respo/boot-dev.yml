@@ -21,11 +21,6 @@ rabbitmq:
 spring:
   application:
     name: boot
-  datasource:
-    username: simt
-    password: simt
-    url: jdbc:oracle:thin:@127.0.0.1:1521:orcl
-    driver-class-name: oracle.jdbc.driver.OracleDriver
   cloud:
     stream:
       bindings:

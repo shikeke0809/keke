@@ -9,7 +9,7 @@ eureka:
     leaseRenewalIntervalInSeconds: 10
     health-check-url-path: /actuator/health
     metadata-map:
-      user：
+      user:
         name: ${spring.security.user.name}
         password: ${spring.security.user.password}
 rabbitmq:

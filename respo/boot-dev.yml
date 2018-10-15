@@ -9,8 +9,9 @@ eureka:
     leaseRenewalIntervalInSeconds: 10
     health-check-url-path: /actuator/health
     metadata-map:
-      user.name: ${spring.security.user.name}
-      user.password: ${spring.security.user.password}
+      user：
+        name: ${spring.security.user.name}
+        password: ${spring.security.user.password}
 rabbitmq:
     host: 127.0.0.1
     port: 5672

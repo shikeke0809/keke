@@ -21,6 +21,20 @@ rabbitmq:
 spring:
   application:
     name: boot
+  datasource:
+      username: simt
+      password: simt
+      url: jdbc:oracle:thin:@127.0.0.1:1521:orcl
+      driver-class-name: oracle.jdbc.driver.OracleDriver
+  security:
+    user:
+      name: 'boot'
+      password: 'boot'
+  sleuth:
+    sampler:
+      probability: 1.0
+  zipkin:
+    base-url: http://localhost:9411
   cloud:
     stream:
       bindings:
@@ -37,3 +51,11 @@ mybatis:
   mapper-locations: classpath:mapper/*.xml #指定mapperxml所在的位置，要用/分割
 logging:
   file: E:/logs/springboot.log #指定日志路径
+management:
+  endpoints:
+    web:
+      exposure:
+        include: refresh
+  endpoint:
+    health:
+      show-details: ALWAYS

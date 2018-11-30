@@ -6,6 +6,8 @@ eureka:
       defaultZone: http://localhost:8761/eureka/
       #defaultZone: http://peer1:8701/eureka/
   instance:
+    prefer-ip-address: true
+    ip-address: 127.0.0.1
     leaseRenewalIntervalInSeconds: 10
     health-check-url-path: /actuator/health
     metadata-map:
